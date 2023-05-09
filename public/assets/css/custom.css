@@ -1,0 +1,22 @@
+.header_logo_text {
+    color: #fff;
+}
+
+.nav-tabs-vertical .nav-link.active {
+    background: #252b36;
+    color: #fffbed;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.required_mark {
+    font-weight: bold;
+    color: #ed2d2d;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e5e5e5;
+}
