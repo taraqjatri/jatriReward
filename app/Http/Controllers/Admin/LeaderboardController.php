@@ -80,11 +80,6 @@ class LeaderboardController extends Controller
         $to = $date['to']->format('Y-m-d');
 
         if (!empty(request())) {
-
-            if ($request->has('seller_type') && $request->seller_type != 'ALL') {
-                $sellers->where('seller_type', $request->seller_type);
-            }
-
             $sellers->where('created_at', '>=', $from)
                 ->where('created_at', '<=', $to . ' 23:59:59');
         }
@@ -104,7 +99,6 @@ class LeaderboardController extends Controller
         $date = ControllerHelper::getTypeWiseFromDateToDate($request->type);
         $from = $date['from']->format('Y-m-d');
         $to = $date['to']->format('Y-m-d');
-        $seller_type = $request->seller_type;
 
         $seller_point_list = DB::table('user_p_n_r_submissions')
             ->select('*')
@@ -113,9 +107,6 @@ class LeaderboardController extends Controller
             ->when(!empty($request->type) && $request->type != 'ALL', function ($q) use ($from, $to) {
                 return $q->where('created_at', '>=', $from)
                     ->where('created_at', '<=', $to . ' 23:59:59');
-            })
-            ->when(!empty($request->seller_type) && $request->seller_type != 'ALL' , function ($q) use ($seller_type) {
-                return $q->where('seller_type', $seller_type);
             })
             ->latest('created_at')
             ->limit(50)

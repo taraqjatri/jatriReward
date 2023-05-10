@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Enums\AdminTypeEnum;
+use App\Enum\AdminTypeEnum;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;

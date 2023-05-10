@@ -62,7 +62,8 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => \App\Models\B2CService\User::class,
+//            'model' => \App\Models\B2CService\User::class,
+            'model' => \App\Models\Admin::class,
         ],
 
         // 'users' => [

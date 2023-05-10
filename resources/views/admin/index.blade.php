@@ -75,7 +75,7 @@
                                         <td>{{ request('page') ? $loop->iteration + ((request('page') - 1) * 50) : $loop->iteration }}</td>
                                         <td style="position: relative;">
                                             {{ $admin->name }}
-                                            @if($admin->admin_type == \App\Enums\AdminTypeEnum::SYSTEM_ADMIN->value)
+                                            @if($admin->admin_type == \App\Enum\AdminTypeEnum::SYSTEM_ADMIN->value)
                                                 <span class="badge bg-primary" style="position: absolute; right: 0; margin-right: 10px;">S</span>
                                             @endif
                                         </td>

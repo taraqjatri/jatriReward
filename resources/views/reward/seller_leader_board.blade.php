@@ -29,21 +29,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group col-md-2">
-                            <label class="control-label col-md-12 col-sm-12 col-xs-12">Seller Type</label>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <select name="seller_type" class="form-control style-input">
-                                    <option value="ALL" {{ (request('seller_type') == 'ALL') ? 'selected' : '' }}> ALL
-                                    </option>
-                                    @foreach(\App\Constants\SellerType::all() as $name => $value)
-                                        <option
-                                                value="{{ $value }}" {{ (request('seller_type') == $value) ? 'selected' : '' }}>
-                                            {{ $name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-
                         <div class="col-md-1">
                             <label class="fw-bold col-md-12 col-sm-0 col-xs-0">&nbsp;</label>
                             <button type="submit"

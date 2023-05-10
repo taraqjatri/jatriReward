@@ -67,7 +67,7 @@
                                     <p class="mb-0">Type</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">{{ \App\Enums\AdminTypeEnum::from($user->admin_type)->value }}</p>
+                                    <p class="text-muted mb-0">{{ \App\Enum\AdminTypeEnum::from($user->admin_type)->value }}</p>
                                 </div>
                             </div>
                         </div>
