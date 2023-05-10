@@ -86,6 +86,7 @@
                             <p class="text-muted mb-0">{{ $pnr_details->from_stoppage }}</p>
                         </div>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class=" col-6">
                             <p class="mb-0">To</p>
